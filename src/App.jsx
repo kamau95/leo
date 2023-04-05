@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import Prev from './Prev';
+import UseObject from './UseObject';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -17,22 +18,23 @@ function App() {
 
   return (
     <div className="App">
-      <>
+    
         <Prev />
+        <UseObject/>
         <div>
           <button onClick={handleClick}>Click Me</button>
           <h1>the current count is {count} </h1>
           <button onClick={handleDecrement}>Click Me</button>
         </div>
         <div>
-          <button onClick={() => setValue(value + 1)}>+</button>
+          <button onClick={( ) => setValue(value + 1)}>+</button>
           <h1>the value is {value}</h1>
-          <button onClick={() => setValue(value - 1)}>-</button>
+          <button onClick={( ) => setValue(value - 1)}>-</button>
         </div>
         <div>
-          <button onClick={() => setValue(87)}>Reset</button>
+          <button onClick={( ) => setValue(87)}>Reset</button>
         </div>
-      </>
+
     </div>
   );
 }
